@@ -12,14 +12,14 @@ namespace AngularJSExerciseMain_API.Controllers
     {
         public HttpResponseMessage Get(string IDNumber = "", string email = "")
         {
-            if (IDNumber == "" && email == "")
+            if ((IDNumber == "" || IDNumber == null) && (email == "" || email == null))
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Login user didn't found");
 
             using (DSEntities entities = new DSEntities())
             {
                 Signin entity = null;
 
-                if (IDNumber != "")
+                if (IDNumber != "" && IDNumber != null)
                     entity = entities.Signins.FirstOrDefault(e => e.IDNumber == IDNumber);
                 else
                     entity = entities.Signins.FirstOrDefault(e => e.Email == email);

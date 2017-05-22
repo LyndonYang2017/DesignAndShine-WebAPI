@@ -245,6 +245,7 @@
     <Compile Include="Controllers\DSDiagnosisController.cs" />
     <Compile Include="Controllers\DSLoginController.cs" />
     <Compile Include="Controllers\DSQuestionsController.cs" />
+    <Compile Include="Controllers\DSRegistrationController.cs" />
     <Compile Include="Controllers\DSSigninController.cs" />
     <Compile Include="Controllers\DSStationNameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
